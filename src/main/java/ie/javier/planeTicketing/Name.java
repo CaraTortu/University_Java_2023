@@ -9,9 +9,7 @@ public class Name {
     // Overloading constructors
 
     public Name() {
-        this.title = "";
-        this.firstName = "";
-        this.surname = "";
+        this.title = this.firstName = this.surname = "";
     }
 
     public Name(String title_super, String firstname_super, String surname_super) {
@@ -21,18 +19,17 @@ public class Name {
     }
 
     // Getters
-    
+
     public String getTitle() {
-        return title;
+        return this.title;
     }
 
     public String getFirstName() {
-        return firstName;
+        return this.firstName;
     }
 
-
     public String getSurname() {
-        return surname;
+        return this.surname;
     }
 
     // Setters
@@ -40,24 +37,31 @@ public class Name {
     public void setTitle(String title_super) {
         this.title = title_super;
     }
- 
+
     public void setFirstName(String firstName_super) {
         this.firstName = firstName_super;
     }
- 
+
     public void setSurname(String surname_super) {
         this.surname = surname_super;
     }
-        
+
     // Overriden Object class methods
     @Override
     public String toString() {
-        return "Title: " + title + " | First Name: " + firstName + " | Surname: " + surname;
+        return String.format("%s %s %s", this.title, this.firstName, this.surname);
     }
-    
+
     @Override
     public boolean equals(Object object) {
-        return object.hashCode() == this.hashCode();
+        if ( !(object instanceof Name) ) {
+            return false;
+        }
+
+        Name obj = (Name) object;
+        return (obj.title == this.title &&
+                obj.firstName == this.firstName &&
+                obj.surname == this.surname);
     }
 
     // Custom class methods
