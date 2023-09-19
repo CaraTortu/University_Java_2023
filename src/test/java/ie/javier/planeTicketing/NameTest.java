@@ -28,4 +28,12 @@ public class NameTest
         assertTrue(!name_a.equals(name_b));
         assertTrue(name_a.equals(name_c));
     }
+
+    // Test string formatting
+    @Test
+    public void testFormatting() {
+        Name a = new Name("Mr", "Deez", "Nuts");
+
+        assertTrue(a.toString().equals("Mr Deez Nuts"));
+    }
 }
