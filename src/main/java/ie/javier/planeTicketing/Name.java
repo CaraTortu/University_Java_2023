@@ -2,9 +2,9 @@ package ie.javier.planeTicketing;
 
 
 public class Name {
-    protected String title;
-    protected String firstName;
-    protected String surname;
+    private String title;
+    private String firstName;
+    private String surname;
 
     // Overloading constructors
 
