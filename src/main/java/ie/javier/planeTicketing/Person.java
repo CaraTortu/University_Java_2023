@@ -9,8 +9,8 @@ public abstract class Person {
         this.phoneNumber = "";
     }
 
-    Person (String title, String first_name, String surname, String phoneN) {
-        this.name = new Name(title, first_name, surname);
+    Person (String title, String firstName, String surname, String phoneN) {
+        this.name = new Name(title, firstName, surname);
         this.phoneNumber = phoneN;
     }
 
@@ -28,9 +28,9 @@ public abstract class Person {
         this.name = name;
     }
 
-    public void setName(String title, String first_name, String surname) {
+    public void setName(String title, String firstName, String surname) {
         this.name.setTitle(title);
-        this.name.setFirstName(first_name);
+        this.name.setFirstName(firstName);
         this.name.setSurname(surname);
     }
 
