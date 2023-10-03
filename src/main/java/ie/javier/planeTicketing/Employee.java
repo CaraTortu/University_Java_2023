@@ -68,9 +68,9 @@ public class Employee extends Person implements Payable {
         this.salary += incrementAmount;
         return Math.min(150000, this.salary);
     }
-
+    
     @Override
     public String toString() {
-        return String.format("%s,   %s, %s, %s, €%.2f.", this.name, this.phoneNumber, this.dateOfBirth, this.startDate, this.salary);
+        return String.format("%s,    %s, %s, %s, €%.2f.", this.name, this.phoneNumber, this.dateOfBirth, this.startDate, this.salary);
     }
 }
