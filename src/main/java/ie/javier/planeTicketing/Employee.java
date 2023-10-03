@@ -10,11 +10,12 @@ public class Employee extends Person implements Payable {
     private Date dateOfBirth;
     private Date startDate;
     private double salary;
+    private int employeeNumber;
 
     public Employee() {
         this.salary = 0;
         this.dateOfBirth = this.startDate = new Date();
-        this.number = number++;
+        this.employeeNumber = number++;
     }
 
     public Employee(String title, String first_name, String surname, String phoneN, Date dob, Date startDate, double salary) {
@@ -23,13 +24,13 @@ public class Employee extends Person implements Payable {
         this.dateOfBirth = dob;
         this.startDate = startDate;
         this.salary = salary;
-        this.number = number++;
+        this.employeeNumber = number++;
     }
 
     // GETTERS
 
-    public int getNumber() {
-        return number;
+    public int getEmployeeNumber() {
+        return employeeNumber;
     }
 
     public Date getDateOfBirth() {
@@ -66,12 +67,12 @@ public class Employee extends Person implements Payable {
 
     @Override
     public double incrementSalary(double incrementAmount) {
-        this.salary += incrementAmount;
-        return Math.min(150000, this.salary);
+        this.salary += Math.min(150000, this.salary + incrementAmount);
+        return this.salary;
     }
     
     @Override
     public String toString() {
-        return String.format("%s,    %s, %s, %s, €%.2f.", this.name, this.phoneNumber, this.dateOfBirth, this.startDate, this.salary);
+        return String.format("%s,    %s, %s, %s, €%.2f.", this.employeeNumber, this.phoneNumber, this.dateOfBirth, this.startDate, this.salary);
     }
 }
