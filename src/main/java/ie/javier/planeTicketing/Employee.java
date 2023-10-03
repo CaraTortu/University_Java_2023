@@ -67,7 +67,7 @@ public class Employee extends Person implements Payable {
 
     @Override
     public double incrementSalary(double incrementAmount) {
-        this.salary += Math.min(150000, this.salary + incrementAmount);
+        this.salary = Math.min(150000, this.salary + incrementAmount);
         return this.salary;
     }
     
