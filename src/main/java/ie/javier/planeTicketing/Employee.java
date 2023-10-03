@@ -55,7 +55,7 @@ public class Employee extends Person implements Payable {
         this.startDate = startDate;
     }
 
-    public void salary(double newSalary) {
+    public void setSalary(double newSalary) {
         this.salary = newSalary;
     }
 
