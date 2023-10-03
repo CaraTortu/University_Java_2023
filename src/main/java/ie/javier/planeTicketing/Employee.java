@@ -14,6 +14,7 @@ public class Employee extends Person implements Payable {
     public Employee() {
         this.salary = 0;
         this.dateOfBirth = this.startDate = new Date();
+        this.number = number++;
     }
 
     public Employee(String title, String first_name, String surname, String phoneN, Date dob, Date startDate, double salary) {
@@ -22,7 +23,7 @@ public class Employee extends Person implements Payable {
         this.dateOfBirth = dob;
         this.startDate = startDate;
         this.salary = salary;
-        number += 1;
+        this.number = number++;
     }
 
     // GETTERS
