@@ -14,7 +14,7 @@ public class Date {
     public Date(int d, int m, int y) {
         // Make sure the day is between 1 and 31. The month is between 1 and 12 and the year isn't negative
         // IMPROVEMENTS: Implement a method to check whether the month has 31 days and see if its valid
-        if (d < 1 || d > 31 || m < 1 || m > 12 || y < 0) {
+        if (d < 1 || d > 31 || m < 1 || m > 12 || y < 1900) {
             throw new IllegalArgumentException("Error: INCORRECT DATE");
         }
 

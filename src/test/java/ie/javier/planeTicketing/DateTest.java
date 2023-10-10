@@ -27,4 +27,17 @@ public class DateTest {
 
         assertTrue(a.toString().equals("5/9/2006"));
     }
+
+    // Test exception
+    @Test
+    public void testException() {
+        try {
+            new Date(10, 13, 1800);
+        } catch (Exception e) {
+            assertTrue(true);
+            return;
+        }
+
+        assertTrue(false);
+    }
 }
