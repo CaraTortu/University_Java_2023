@@ -3,6 +3,8 @@ package ie.javier.planeTicketing;
 import java.util.ArrayList;
 import org.junit.Test;
 
+import ie.javier.planeTicketing.classes.*;
+
 public class PassengerTest {
     
     @Test

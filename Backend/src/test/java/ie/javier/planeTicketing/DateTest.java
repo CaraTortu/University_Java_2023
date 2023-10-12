@@ -3,6 +3,7 @@ package ie.javier.planeTicketing;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
+import ie.javier.planeTicketing.classes.*;
 
 public class DateTest {
     // Test the Date equals
