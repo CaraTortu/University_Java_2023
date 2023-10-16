@@ -1,7 +1,8 @@
 package ie.javier.planeTicketing.classes;
 
+import java.io.Serializable;
 
-public class Name {
+public class Name implements Serializable {
     private String title;
     private String firstName;
     private String surname;

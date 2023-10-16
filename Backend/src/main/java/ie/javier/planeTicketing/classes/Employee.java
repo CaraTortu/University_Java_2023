@@ -1,12 +1,13 @@
 package ie.javier.planeTicketing.classes;
 
+import java.io.Serializable;
 
 interface Payable {
    double calculatePay(double taxPercentage);
    double incrementSalary(double incrementAmount);
 }
 
-public class Employee extends Person implements Payable {
+public class Employee extends Person implements Payable, Serializable {
     private static int number = 10000;
     private Date dateOfBirth;
     private Date startDate;

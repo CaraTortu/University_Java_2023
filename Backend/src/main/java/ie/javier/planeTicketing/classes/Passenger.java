@@ -1,6 +1,8 @@
 package ie.javier.planeTicketing.classes;
 
-public class Passenger extends Person {
+import java.io.Serializable;
+
+public class Passenger extends Person implements Serializable {
     private String emailAddress;
     private int noBags;
     private boolean priorityBoarding;

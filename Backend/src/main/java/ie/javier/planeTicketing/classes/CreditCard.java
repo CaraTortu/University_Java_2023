@@ -1,6 +1,8 @@
 package ie.javier.planeTicketing.classes;
 
-public class CreditCard {
+import java.io.Serializable;
+
+public class CreditCard implements Serializable {
     private String number;
     private Date expiryDate;
     private int securityCode;

@@ -1,6 +1,8 @@
 package ie.javier.planeTicketing.classes;
 
-public abstract class Person {
+import java.io.Serializable;
+
+public abstract class Person implements Serializable {
     protected Name name;
     protected String phoneNumber;
 
